@@ -195,7 +195,7 @@
     });
 
     /* CTA bg parallax */
-    const ctaImg = document.querySelector(".cta__bg img");
+    const ctaImg = document.querySelector(".cta__bg img, .cta__bg video");
     if (ctaImg) gsap.fromTo(ctaImg, { yPercent: -10 }, {
       yPercent: 10, ease: "none",
       scrollTrigger: { trigger: ".cta", start: "top bottom", end: "bottom top", scrub: true },
