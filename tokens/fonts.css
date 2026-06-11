@@ -1,0 +1,58 @@
+/* ============================================================
+   Hapa Honey — Web Fonts
+
+   Body:    Manrope (self-hosted woff2, weights 200–800)
+   Display: "Beach Lombok" is a PREMIUM font used in the logo &
+            headings and is NOT in the export. We substitute
+            DM Serif Display (Google Fonts) as the closest free
+            high-contrast retro-display match. Swap in the real
+            Beach Lombok woff2 here to match the logo exactly.
+   ============================================================ */
+
+/* --- Display substitute: DM Serif Display --- */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+
+/* --- Manrope (self-hosted) --- */
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/manrope-200.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/manrope-300.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/manrope-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/manrope-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/manrope-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  font-style: normal;
+  /* 700 was not in the export; this face covers bold requests too */
+  font-weight: 700 800;
+  font-display: swap;
+  src: url("../fonts/manrope-800.woff2") format("woff2");
+}

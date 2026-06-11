@@ -1,0 +1,140 @@
+/* ============================================================
+   Hapa Honey — Color Tokens
+   A warm, earthy Hawaiian palette: neutral inks, leather brown,
+   driftwood gold, pesto olive, and bizarre blush.
+   ============================================================ */
+
+:root {
+  /* ---- Neutral (ink → paper) ---- */
+  --color-white: #ffffff;
+  --color-neutral-lightest: #f2f2f2;
+  --color-neutral-lighter: #d9d9d9;
+  --color-neutral-light: #b4b4b3;
+  --color-neutral: #838281;
+  --color-neutral-dark: #51504e;
+  --color-neutral-darker: #1f1e1c;
+  --color-neutral-darkest: #070603;
+
+  /* ---- Bizarre (blush / sand) — soft warm pink-beige ---- */
+  --color-bizarre-lightest: #fdfbfa;
+  --color-bizarre-lighter: #fbf7f6;
+  --color-bizarre-light: #f1e5e0;
+  --color-bizarre: #ebdad4;
+  --color-bizarre-dark: #bcaea9;
+  --color-bizarre-darker: #5e5754;
+  --color-bizarre-darkest: #46413f;
+
+  /* ---- Leather — rich cocoa brown ---- */
+  --color-leather-lightest: #f5f1ee;
+  --color-leather-lighter: #ece4de;
+  --color-leather-light: #bea18e;
+  --color-leather: #a37a5e;
+  --color-leather-dark: #82614b;
+  --color-leather-darker: #413025;
+  --color-leather-darkest: #30241c;
+
+  /* ---- Driftwood — warm honey gold ---- */
+  --color-driftwood-lightest: #f7f2ed;
+  --color-driftwood-lighter: #efe6db;
+  --color-driftwood-light: #c9a881;
+  --color-driftwood: #b3844b;
+  --color-driftwood-dark: #8f693c;
+  --color-driftwood-darker: #47341e;
+  --color-driftwood-darkest: #352716;
+
+  /* ---- Pesto — muted olive / kukui green ---- */
+  --color-pesto-lightest: #f2f1eb;
+  --color-pesto-lighter: #e6e4d8;
+  --color-pesto-light: #a8a177;
+  --color-pesto: #847a3e;
+  --color-pesto-dark: #696131;
+  --color-pesto-darker: #343018;
+  --color-pesto-darkest: #272412;
+
+  /* ---- Alpha overlays (on light) ---- */
+  --color-ink-05: color-mix(in srgb, var(--color-neutral-darkest), transparent 95%);
+  --color-ink-10: color-mix(in srgb, var(--color-neutral-darkest), transparent 90%);
+  --color-ink-15: color-mix(in srgb, var(--color-neutral-darkest), transparent 85%);
+  --color-ink-20: color-mix(in srgb, var(--color-neutral-darkest), transparent 80%);
+  --color-ink-50: color-mix(in srgb, var(--color-neutral-darkest), transparent 50%);
+
+  /* ---- Alpha overlays (on dark) ---- */
+  --color-white-05: color-mix(in srgb, var(--color-white), transparent 95%);
+  --color-white-10: color-mix(in srgb, var(--color-white), transparent 90%);
+  --color-white-15: color-mix(in srgb, var(--color-white), transparent 85%);
+  --color-white-20: color-mix(in srgb, var(--color-white), transparent 80%);
+  --color-white-50: color-mix(in srgb, var(--color-white), transparent 50%);
+
+  /* ============================================================
+     Semantic aliases — default (light / Scheme 1) surface
+     Sections override these via .scheme-* classes below.
+     ============================================================ */
+  --surface-page: var(--color-white);
+  --surface-card: var(--color-white);
+  --text-strong: var(--color-neutral-darkest);
+  --text-body: var(--color-neutral-darkest);
+  --text-muted: var(--color-neutral);
+  --border-subtle: var(--color-ink-15);
+  --accent: var(--color-neutral-darkest);
+
+  /* Brand signature accents */
+  --brand-honey: var(--color-driftwood);
+  --brand-cocoa: var(--color-leather-dark);
+  --brand-olive: var(--color-pesto-light);
+  --brand-blush: var(--color-bizarre);
+
+  /* Button (default = blush capsule) */
+  --btn-bg: var(--color-bizarre);
+  --btn-bg-hover: var(--color-bizarre-dark);
+  --btn-text: var(--color-neutral-darkest);
+}
+
+/* ============================================================
+   Color Schemes — applied per-section as a class.
+   Each scheme is derived from one background; text / border /
+   accent are computed for contrast. Mirrors the Relume export.
+   ============================================================ */
+
+.scheme-1 {
+  /* Paper white */
+  --scheme-bg: var(--color-white);
+  --scheme-fg: var(--color-white);
+  --scheme-text: var(--color-neutral-darkest);
+  --scheme-border: var(--color-ink-15);
+  --scheme-accent: var(--color-neutral-darkest);
+  background-color: var(--scheme-bg);
+  color: var(--scheme-text);
+}
+
+.scheme-2 {
+  /* Cocoa / leather-dark — dark scheme */
+  --scheme-bg: var(--color-leather-dark);
+  --scheme-fg: var(--color-leather-dark);
+  --scheme-text: var(--color-white);
+  --scheme-border: var(--color-white-20);
+  --scheme-accent: var(--color-bizarre);
+  background-color: var(--scheme-bg);
+  color: var(--scheme-text);
+}
+
+.scheme-3 {
+  /* Pesto-light olive — dark-on-color scheme */
+  --scheme-bg: var(--color-pesto-light);
+  --scheme-fg: var(--color-pesto-light);
+  --scheme-text: var(--color-white);
+  --scheme-border: var(--color-white-20);
+  --scheme-accent: var(--color-white);
+  background-color: var(--scheme-bg);
+  color: var(--scheme-text);
+}
+
+.scheme-4 {
+  /* Bizarre blush — light scheme */
+  --scheme-bg: var(--color-bizarre);
+  --scheme-fg: var(--color-bizarre);
+  --scheme-text: var(--color-neutral-darkest);
+  --scheme-border: var(--color-ink-15);
+  --scheme-accent: var(--color-neutral-darkest);
+  background-color: var(--scheme-bg);
+  color: var(--scheme-text);
+}
