@@ -297,9 +297,9 @@ body.cursor-view .cursor-ring .cur-label { opacity: 1; }
 
 /* ---------------- CTA ---------------- */
 .cta { position: relative; overflow: hidden; text-align: center; padding-block: clamp(6rem, 16vh, 13rem); }
-.cta__bg { position: absolute; inset: 0; z-index: 0; }
-.cta__bg img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.15); will-change: transform; }
-.cta__bg video { width: 100%; height: 100%; object-fit: cover; object-position: center top; transform: scale(1.15); transform-origin: center top; will-change: transform; }
+.cta__bg { position: absolute; left: 0; right: 0; top: -15%; bottom: -15%; z-index: 0; }
+.cta__bg img { width: 100%; height: 100%; object-fit: cover; will-change: transform; }
+.cta__bg video { width: 100%; height: 100%; object-fit: cover; object-position: center top; will-change: transform; }
 .cta::before { content:""; position:absolute; inset:0; z-index:1; background: rgba(11,9,8,.62); }
 .cta .wrap { position: relative; z-index: 2; }
 .cta h2 { font-size: clamp(2.6rem, 8vw, 7.5rem); line-height: .95; color: var(--cream); }
