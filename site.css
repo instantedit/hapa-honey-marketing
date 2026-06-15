@@ -422,7 +422,7 @@ body.cursor-view .cursor-ring .cur-label { opacity: 1; }
    Portfolio highlights (home) + category subpages
    ============================================================ */
 .highlights {
-  display: grid; grid-template-columns: repeat(3, 1fr);
+  display: grid; grid-template-columns: repeat(4, 1fr);
   gap: clamp(1rem, 2.2vw, 2rem); margin-top: clamp(2rem, 5vw, 3.5rem);
 }
 .hl-card { display: block; text-decoration: none; color: inherit; }
@@ -488,9 +488,20 @@ a.social-card:hover { border-color: var(--honey); transform: translateY(-4px); b
 .social-card__handle { font-size: 13px; letter-spacing: .04em; color: rgba(247,241,234,.6); display: inline-flex; align-items: center; gap: .5rem; }
 a.social-card .social-card__handle { color: var(--honey); }
 
+/* Graphic design — masonry gallery */
+.gd-grid { columns: 3 280px; column-gap: clamp(.8rem, 2vw, 1.4rem); margin-top: clamp(2.5rem, 6vw, 4.5rem); }
+.gd-item { display: block; break-inside: avoid; margin: 0 0 clamp(.8rem, 2vw, 1.4rem); border-radius: 12px; overflow: hidden; }
+.gd-item img { width: 100%; height: auto; display: block; transition: transform .6s var(--ease-standard); }
+.gd-item:hover img { transform: scale(1.04); }
+
+@media (max-width: 1100px) {
+  .highlights { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 900px) {
-  .highlights { grid-template-columns: 1fr; }
-  .hl-card__media { aspect-ratio: 16/10; }
+  .hl-card__media { aspect-ratio: 4/5; }
   .portfolio-grid, .portfolio-grid--reels, .social-grid { grid-template-columns: 1fr; }
   .portfolio-grid--reels { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .highlights { grid-template-columns: 1fr; }
 }
