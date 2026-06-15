@@ -422,7 +422,7 @@ body.cursor-view .cursor-ring .cur-label { opacity: 1; }
    Portfolio highlights (home) + category subpages
    ============================================================ */
 .highlights {
-  display: grid; grid-template-columns: repeat(4, 1fr);
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: clamp(1rem, 2.2vw, 2rem); margin-top: clamp(2rem, 5vw, 3.5rem);
 }
 .hl-card { display: block; text-decoration: none; color: inherit; }
@@ -470,9 +470,10 @@ body.cursor-view .cursor-ring .cur-label { opacity: 1; }
 .pf-card__meta h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); }
 .pf-card__tag { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--honey); font-weight: 600; white-space: nowrap; }
 
-/* Instagram reel embeds */
+/* Instagram reel embeds + self-hosted video reels */
 .pf-card--reel .pf-card__media { aspect-ratio: 9/16; border-radius: 16px; }
 .pf-card--reel iframe { width: 100%; height: 100%; border: 0; display: block; }
+.pf-card--reel video { width: 100%; height: 100%; object-fit: cover; display: block; background: #000; }
 
 /* Social media — name cards (most have no public link) */
 .social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2.5vw, 1.8rem); margin-top: clamp(2.5rem, 6vw, 4.5rem); }
@@ -494,14 +495,8 @@ a.social-card .social-card__handle { color: var(--honey); }
 .gd-item img { width: 100%; height: auto; display: block; transition: transform .6s var(--ease-standard); }
 .gd-item:hover img { transform: scale(1.04); }
 
-@media (max-width: 1100px) {
-  .highlights { grid-template-columns: repeat(2, 1fr); }
-}
 @media (max-width: 900px) {
   .hl-card__media { aspect-ratio: 4/5; }
   .portfolio-grid, .portfolio-grid--reels, .social-grid { grid-template-columns: 1fr; }
   .portfolio-grid--reels { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 600px) {
-  .highlights { grid-template-columns: 1fr; }
 }
