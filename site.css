@@ -323,6 +323,8 @@ body.cursor-view .cursor-ring .cur-label { opacity: 1; }
 .footer__col a, .footer__col p { display: block; color: rgba(247,241,234,.78); margin-bottom: .7rem; font-size: 15px; }
 .footer__col a:hover { color: var(--honey-bright); }
 .footer__bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 2rem; font-size: 13px; color: rgba(247,241,234,.55); }
+.footer__bottom a { color: var(--honey); text-decoration: none; transition: color .3s; }
+.footer__bottom a:hover { color: var(--honey-bright); text-decoration: underline; }
 .footer__socials { display: flex; gap: 1.4rem; }
 .footer__socials a { color: rgba(247,241,234,.78); font-size: 1.3rem; }
 .footer__socials a:hover { color: var(--honey-bright); }

@@ -5,6 +5,9 @@
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isMobile = window.matchMedia("(max-width: 900px)").matches;
 
+  /* Auto-update copyright year */
+  document.querySelectorAll(".js-year").forEach((el) => { el.textContent = String(new Date().getFullYear()); });
+
   /* ---------------- Custom cursor ---------------- */
   (function cursor() {
     if (isMobile) return;
