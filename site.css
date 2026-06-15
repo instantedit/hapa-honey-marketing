@@ -317,7 +317,7 @@ body.cursor-view .cursor-ring .cur-label { opacity: 1; }
 /* ---------------- Footer ---------------- */
 .footer { background: var(--ink-deep); color: var(--cream); padding-block: clamp(4rem, 8vh, 7rem) 2.5rem; }
 .footer__top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; padding-bottom: 3.5rem; border-bottom: 1px solid rgba(247,241,234,.12); }
-.footer__brand img { height: 30px; filter: brightness(0) invert(1); margin-bottom: 1.4rem; }
+.footer__brand img { height: clamp(34px, 4vw, 42px); filter: brightness(0) invert(1); margin-bottom: 1.4rem; }
 .footer__brand p { color: rgba(247,241,234,.65); max-width: 24rem; line-height: 1.6; }
 .footer__col h4 { font-family: var(--font-body); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--honey); margin-bottom: 1.2rem; }
 .footer__col a, .footer__col p { display: block; color: rgba(247,241,234,.78); margin-bottom: .7rem; font-size: 15px; }
