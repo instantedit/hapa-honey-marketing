@@ -248,7 +248,7 @@ body.cursor-view .cursor-ring .cur-label { opacity: 1; }
 .svc-card__tags span { font-size: 12px; letter-spacing: .04em; padding: .4rem .8rem; border: 1px solid rgba(247,241,234,.22); border-radius: 999px; color: rgba(247,241,234,.8); }
 
 /* ---------------- Work (horizontal scroll) ---------------- */
-.work { background: var(--ink); overflow: hidden; }
+.work { background: var(--ink); overflow: hidden; padding-bottom: clamp(5rem, 12vh, 11rem); }
 .work__head { padding-top: clamp(4rem, 9vh, 8rem); }
 .work__head h2 { font-size: clamp(2.4rem, 6vw, 5.5rem); line-height: .95; }
 .work__pin { height: 100svh; display: flex; align-items: center; }
