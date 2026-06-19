@@ -334,7 +334,7 @@ body.cursor-view .cursor-ring .cur-label { opacity: 1; }
 @media (max-width: 760px) { .footer__top { grid-template-columns: 1fr; } }
 
 /* big footer wordmark */
-.footer__mark { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(3.5rem, 18vw, 17rem); line-height: .82; letter-spacing: -.02em; color: rgba(247,241,234,.06); margin-top: 3rem; pointer-events: none; }
+.footer__mark { font-family: var(--font-display); text-transform: uppercase; font-size: clamp(3.5rem, 18vw, 17rem); line-height: .82; letter-spacing: -.02em; color: rgba(247,241,234,.11); margin-top: 3rem; pointer-events: none; }
 
 /* ---------------- Reveal utility ---------------- */
 .reveal { opacity: 0; transform: translateY(36px); transition: opacity .9s var(--ease-standard), transform .9s var(--ease-standard); }
