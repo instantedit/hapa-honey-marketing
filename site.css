@@ -313,6 +313,9 @@ body.cursor-view .cursor-ring .cur-label { opacity: 1; }
   transition: transform .35s var(--ease-standard), background .35s;
 }
 .cta__btn:hover { transform: translateY(-3px); background: var(--cream); }
+.cta__btns { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+.cta__btn--ghost { background: transparent; color: var(--cream); border: 1px solid rgba(247,241,234,.45); }
+.cta__btn--ghost:hover { background: rgba(247,241,234,.12); border-color: var(--cream); color: var(--cream); }
 
 /* ---------------- Footer ---------------- */
 .footer { background: var(--ink-deep); color: var(--cream); padding-block: clamp(4rem, 8vh, 7rem) 2.5rem; }
