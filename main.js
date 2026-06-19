@@ -79,6 +79,31 @@
     }
   })();
 
+  /* ---------------- Booking modal ---------------- */
+  (function modal() {
+    const modal = document.getElementById("calModal");
+    if (!modal) return;
+    const open = () => {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      if (window.__lenis) window.__lenis.stop();
+    };
+    const close = () => {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      if (window.__lenis) window.__lenis.start();
+    };
+    document.querySelectorAll("[data-modal-open]").forEach((b) =>
+      b.addEventListener("click", (e) => { e.preventDefault(); open(); }));
+    modal.querySelectorAll("[data-modal-close]").forEach((b) =>
+      b.addEventListener("click", close));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) close();
+    });
+  })();
+
   /* ---------------- Lenis ---------------- */
   let lenis = null;
   function initLenis() {

@@ -310,6 +310,7 @@ body.cursor-view .cursor-ring .cur-label { opacity: 1; }
 .cta__btn {
   display: inline-flex; align-items: center; gap: .8rem; padding: 1.1rem 2.4rem; border-radius: 999px;
   background: var(--honey-bright); color: var(--ink); font-weight: 700; font-size: 1rem; letter-spacing: .02em;
+  font-family: inherit; border: none; cursor: pointer;
   transition: transform .35s var(--ease-standard), background .35s;
 }
 .cta__btn:hover { transform: translateY(-3px); background: var(--cream); }
@@ -505,3 +506,28 @@ a.social-card .social-card__handle { color: var(--honey); }
   .portfolio-grid, .portfolio-grid--reels, .social-grid { grid-template-columns: 1fr; }
   .portfolio-grid--reels { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ============================================================
+   Booking modal
+   ============================================================ */
+.modal { position: fixed; inset: 0; z-index: 9900; display: none; align-items: center; justify-content: center; padding: clamp(1rem, 4vw, 2.5rem); }
+.modal.is-open { display: flex; }
+.modal__overlay { position: absolute; inset: 0; background: rgba(11,9,8,.72); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); animation: modalFade .35s var(--ease-standard); }
+.modal__panel {
+  position: relative; z-index: 1; width: 100%; max-width: 520px; max-height: 90vh;
+  display: flex; flex-direction: column; background: var(--cream); border-radius: 20px;
+  overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.5); animation: modalPop .4s var(--ease-standard);
+}
+.modal__head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.05rem 1.3rem; border-bottom: 1px solid rgba(20,17,13,.1); }
+.modal__title { font-family: var(--font-display); font-size: 1.35rem; color: var(--ink); line-height: 1; }
+.modal__close {
+  flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(20,17,13,.18);
+  background: transparent; color: var(--ink); display: grid; place-items: center; font-size: 1.2rem;
+  cursor: pointer; transition: background .3s var(--ease-standard), transform .3s var(--ease-standard);
+}
+.modal__close:hover { background: var(--blush); transform: rotate(90deg); }
+.modal__body { overflow-y: auto; -webkit-overflow-scrolling: touch; background: #fff; }
+.modal__body iframe { display: block; width: 100%; min-height: 640px; border: 0; }
+@keyframes modalFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes modalPop { from { opacity: 0; transform: translateY(22px) scale(.98); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .modal__overlay, .modal__panel { animation: none; } }
