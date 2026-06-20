@@ -497,6 +497,11 @@ a.social-card .social-card__handle { color: var(--honey); }
 
 /* Graphic design — masonry gallery */
 .gd-grid { columns: 3 280px; column-gap: clamp(.8rem, 2vw, 1.4rem); margin-top: clamp(2.5rem, 6vw, 4.5rem); }
+.gd-group { margin-top: clamp(2.5rem, 6vw, 4.5rem); }
+.gd-group__head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: 1.1rem; margin-bottom: 1.6rem; border-bottom: 1px solid rgba(247,241,234,.14); }
+.gd-group__head h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4.2vw, 3rem); line-height: 1; }
+.gd-group__tag { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--honey); font-weight: 600; white-space: nowrap; }
+.gd-group .gd-grid { margin-top: 0; }
 .gd-item { display: block; break-inside: avoid; margin: 0 0 clamp(.8rem, 2vw, 1.4rem); border-radius: 12px; overflow: hidden; }
 .gd-item img { width: 100%; height: auto; display: block; transition: transform .6s var(--ease-standard); }
 .gd-item:hover img { transform: scale(1.04); }
