@@ -505,6 +505,7 @@ a.social-card .social-card__handle { color: var(--honey); }
 .gd-item { display: block; break-inside: avoid; margin: 0 0 clamp(.8rem, 2vw, 1.4rem); border-radius: 12px; overflow: hidden; }
 .gd-item img { width: 100%; height: auto; display: block; transition: transform .6s var(--ease-standard); }
 .gd-item:hover img { transform: scale(1.04); }
+.gd-grid--kits { columns: 2 480px; }
 
 @media (max-width: 900px) {
   .hl-card__media { aspect-ratio: 4/5; }
